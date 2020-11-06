@@ -7,13 +7,6 @@ pipeline{
                 git 'https://github.com/bluedrgaon01/game-of-life'
             }
         }
-        stage('compile')
-        {
-            agent any
-            steps{
-                sh 'mvn compile'
-            }
-        }
         stage('test')
         {
             agent any
