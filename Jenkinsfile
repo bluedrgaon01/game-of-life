@@ -1,10 +1,11 @@
 pipeline{
     agent none
     stages{
-        stage('checkout'){
+        stage('compile')
+        {
             agent any
             steps{
-                git 'https://github.com/bluedrgaon01/game-of-life'
+                sh 'mvn compile'
             }
         }
         stage('test')
